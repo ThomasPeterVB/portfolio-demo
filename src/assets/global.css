@@ -1,0 +1,11 @@
+:root {
+    --global-color-primary: #23252c;
+    --global-color-secondary: #2c2e33;
+    --global-color-accent: #babec4;
+    --global-color-focus: #e0603e;
+
+}
+body {
+    background-color: #444;
+    margin: 0;
+}
