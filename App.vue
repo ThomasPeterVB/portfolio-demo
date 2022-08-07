@@ -1,16 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TopNav />
+  <CornerToast />
+  <CarouselDisplay />
+  <FooterStrip />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TopNav from './components/TopNav.vue'
+import FooterStrip from './components/FooterStrip.vue'
+import CornerToast from './components/CornerToast.vue'
+import CarouselDisplay from './components/CarouselDisplay.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: { TopNav, FooterStrip, CornerToast, CarouselDisplay }
 }
 </script>
 
@@ -20,7 +23,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: var(--global-color-accent);
 }
 </style>
