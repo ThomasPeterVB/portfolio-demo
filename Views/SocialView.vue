@@ -1,7 +1,5 @@
 <template>
-  <div class="footer">
-    <h1></h1>
-  </div>
+  <div>Social</div>
 </template>
 
 <script>
