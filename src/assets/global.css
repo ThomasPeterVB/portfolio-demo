@@ -3,9 +3,28 @@
     --global-color-secondary: #2c2e33;
     --global-color-accent: #babec4;
     --global-color-focus: #e0603e;
+    --global-color-focus2: #833824;
+    --global-color-background: #333;
+    --global-color-contrast: #3e60e0;
 
 }
+
+@font-face {
+    font-family: 'xirodregular';
+    src: url('@/assets/Fonts/Xirod/xirod-webfont.woff2') format('woff2'),
+         url('@/assets/Fonts/Xirod/xirod-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
-    background-color: #444;
+    background-color: var(--global-color-background);
     margin: 0;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
 }

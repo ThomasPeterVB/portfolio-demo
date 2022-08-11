@@ -1,7 +1,11 @@
 <template>
-  <TopNav />
+  <TopNav>
+    
+  </TopNav>
   <CornerToast />
-  <CarouselDisplay />
+  <MainFrame >
+    <router-view />
+  </MainFrame>
   <FooterStrip />
 </template>
 
@@ -9,11 +13,11 @@
 import TopNav from './components/TopNav.vue'
 import FooterStrip from './components/FooterStrip.vue'
 import CornerToast from './components/CornerToast.vue'
-import CarouselDisplay from './components/CarouselDisplay.vue'
+import MainFrame from '@/components/MainFrame.vue'
 
 export default {
   name: 'App',
-  components: { TopNav, FooterStrip, CornerToast, CarouselDisplay }
+  components: { TopNav, FooterStrip, CornerToast, MainFrame },
 }
 </script>
 
