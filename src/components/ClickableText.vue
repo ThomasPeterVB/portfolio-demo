@@ -1,6 +1,4 @@
 <template>
-
-  <h1 class="textcontent">
     <span 
     v-for="char in result" 
     :key="char.id"
@@ -10,7 +8,6 @@
     >
       {{char.letter}}
     </span>
-  </h1>
 
 </template>
 
