@@ -14,9 +14,9 @@ const firebaseConfig = {
   storageBucket: "portfolio-contact-form-96a67.appspot.com",
   messagingSenderId: "851344556751",
   appId: "1:851344556751:web:47c40387a1a1d41a49adba"
-};
+}
 
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 
 createApp(App)
     .use(router)

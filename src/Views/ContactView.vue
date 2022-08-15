@@ -38,7 +38,7 @@ export default {
     submitForm() {
       if (!this.submitStatus){
         document.getElementById("submit").textContent = "Submitting..."
-        const date = new Date();
+        const date = new Date()
         db.collection("portfolio").add({
           name: this.name,
           email: this.email,
@@ -56,7 +56,7 @@ export default {
   },
   computed: {
     headerText() {
-      return this.submitStatus ? 'Message sent' : 'Send me a message';
+      return this.submitStatus ? 'Message sent' : 'Send me a message'
     }
   }
 }

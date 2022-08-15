@@ -36,15 +36,15 @@ export default {
   },
   methods: {
     swapSelection(id) {
-      id === this.currentSelection ? this.currentSelection = 0 : id !== 7 ? this.currentSelection = id : false;
+      id === this.currentSelection ? this.currentSelection = 0 : id !== 7 ? this.currentSelection = id : false
     },
     cycleLeft() {
-      this.imageName = nextImage(-1);
-      this.direction = {one: '-100vw', two: '0', three: '100vw'};
+      this.imageName = nextImage(-1)
+      this.direction = {one: '-100vw', two: '0', three: '100vw'}
     },
     cycleRight() {
-      this.imageName = nextImage(1);
-      this.direction = {one: '100vw', two: '0', three: '-100vw'};
+      this.imageName = nextImage(1)
+      this.direction = {one: '100vw', two: '0', three: '-100vw'}
     }
   },
   watch: {

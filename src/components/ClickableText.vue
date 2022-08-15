@@ -32,7 +32,7 @@ export default {
     currentSelection.value = ref(props.startSelection).value
 
     var switchColorOnClick = ref(false)
-    switchColorOnClick = ref(props.colorMode).value !== undefined ? ref(props.colorMode) : false;
+    switchColorOnClick = ref(props.colorMode).value !== undefined ? ref(props.colorMode) : false
 
     function changeSelection(char) {
       currentSelection === char.id ? currentSelection.value = 0 : char.letter !==' ' ? currentSelection.value = char.id : false
