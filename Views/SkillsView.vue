@@ -97,8 +97,8 @@ export default {
 }
 
 .tophalf h2 {
-  padding-top: 4vh;
-  font-size: 3vh;
+  padding-top: 9vh;
+  font-size: 6vh;
   transition: all 0.6s;
 }
 

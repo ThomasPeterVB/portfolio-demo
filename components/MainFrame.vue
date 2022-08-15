@@ -119,7 +119,6 @@ export default {
   border-style: none solid;
   background-color: rgba(14,14,14,0.6);
   white-space: pre-wrap;
-  overflow-y: auto;
   overflow-x: hidden;
 }
 .cycle{

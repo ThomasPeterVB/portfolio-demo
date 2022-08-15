@@ -1,6 +1,6 @@
 <template>
   <div class="footer">
-    <ClickableText text="I'm looking forward to working with you!" :startSelection="25" />
+    <h1><ClickableText text="I'm looking forward to working with you!" :startSelection="25" /></h1>
   </div>
 </template>
 

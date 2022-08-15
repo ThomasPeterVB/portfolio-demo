@@ -1,13 +1,96 @@
 <template>
-  <div>About</div>
+  <div class="aboutcontainer">
+    <img src="@/assets/images/thomaspetergreyscale.png" alt="">
+    <div class="topright">
+      <h1><VueWriter class="inline" :typeSpeed="100" :eraseSpeed="50"  :array="['JavaScript', 'TypeScript', 'C#', 'Vue', 'React', 'Node', 'Python', 'Java', 'C++']">Hi! I'm <ClickableText text="Thomas" :startSelection="5" />,<br>and I'm a </VueWriter>developer</h1>
+      <br><br>
+      <p>I'm a Freelance full stack web and tools developer from northern Sweden, currently building customer experience tools for a leading global music platform. I gained my first experience in the industry developing an MMORPG, and ran it from my bedroom for 4 years while attending highschool.</p>
+      <br><br>
+      <p>My passion for programming, or rather development as a whole, derives from a desire to create and perfect, therefore my products are UX-centered, intuitive, and highly-optimised.</p>
+    </div>
+    <div class="bottomrow">
+      <a target="_blank" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" fill="currentColor"><path d="M19.959 11.719v7.379h-4.278v-6.885c0-1.73-.619-2.91-2.167-2.91-1.182 0-1.886.796-2.195 1.565-.113.275-.142.658-.142 1.043v7.187h-4.28s.058-11.66 0-12.869h4.28v1.824l-.028.042h.028v-.042c.568-.875 1.583-2.126 3.856-2.126 2.815 0 4.926 1.84 4.926 5.792zM2.421.026C.958.026 0 .986 0 2.249c0 1.235.93 2.224 2.365 2.224h.028c1.493 0 2.42-.989 2.42-2.224C4.787.986 3.887.026 2.422.026zM.254 19.098h4.278V6.229H.254v12.869z"></path></svg></a>
+      <a target="_blank" href="https://github.com/ThomasPeterVB"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" fill="currentColor"><path d="M8.18 15.008c.12 0 .211-.004.271-.012a.317.317 0 0 0 .18-.107c.06-.063.09-.154.09-.274l-.004-.557c-.003-.355-.004-.637-.004-.844l-.188.033a2.41 2.41 0 0 1-.455.028 3.498 3.498 0 0 1-.57-.057 1.276 1.276 0 0 1-.548-.246 1.04 1.04 0 0 1-.36-.503l-.082-.189a2.046 2.046 0 0 0-.258-.417.989.989 0 0 0-.357-.312l-.057-.04a.602.602 0 0 1-.106-.1.455.455 0 0 1-.074-.114c-.016-.038-.003-.07.04-.094a.533.533 0 0 1 .238-.037l.164.025c.11.021.245.087.406.196.16.11.293.251.397.426.126.224.277.395.455.512a.964.964 0 0 0 .536.176c.18 0 .336-.013.467-.04a1.63 1.63 0 0 0 .369-.124c.049-.365.182-.647.4-.843a5.61 5.61 0 0 1-.839-.148 3.346 3.346 0 0 1-.77-.32 2.204 2.204 0 0 1-.66-.548c-.174-.219-.317-.505-.43-.86a4.09 4.09 0 0 1-.167-1.229c0-.66.216-1.223.647-1.687-.202-.497-.183-1.054.057-1.671.159-.05.394-.013.705.11.311.123.54.228.684.316.145.087.26.16.348.22a5.814 5.814 0 0 1 1.573-.212c.54 0 1.065.07 1.573.213l.31-.197c.214-.13.465-.251.754-.36.29-.11.511-.14.664-.09.246.617.268 1.174.065 1.67.432.465.648 1.027.648 1.688 0 .464-.056.875-.168 1.233-.112.358-.257.644-.434.86a2.29 2.29 0 0 1-.664.545 3.342 3.342 0 0 1-.77.32 5.605 5.605 0 0 1-.84.147c.284.245.426.633.426 1.163v1.957c0 .093.014.168.041.226a.226.226 0 0 0 .131.119c.06.021.114.035.16.04.047.006.113.009.2.009h-1.966-2.227z"></path><path d="M4 2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H4zm0-2h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z"></path></svg></a>
+      <a target="_blank" href="https://instagram.com/t.p.writtance/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2 24 24" width="24" fill="currentColor"><path d="M14.017 0h-8.07A5.954 5.954 0 0 0 0 5.948v8.07a5.954 5.954 0 0 0 5.948 5.947h8.07a5.954 5.954 0 0 0 5.947-5.948v-8.07A5.954 5.954 0 0 0 14.017 0zm3.94 14.017a3.94 3.94 0 0 1-3.94 3.94h-8.07a3.94 3.94 0 0 1-3.939-3.94v-8.07a3.94 3.94 0 0 1 3.94-3.939h8.07a3.94 3.94 0 0 1 3.939 3.94v8.07z"></path><path d="M9.982 4.819A5.17 5.17 0 0 0 4.82 9.982a5.17 5.17 0 0 0 5.163 5.164 5.17 5.17 0 0 0 5.164-5.164A5.17 5.17 0 0 0 9.982 4.82zm0 8.319a3.155 3.155 0 1 1 0-6.31 3.155 3.155 0 0 1 0 6.31z"></path><circle cx="15.156" cy="4.858" r="1.237"></circle></svg></a>
+    </div>
+  </div>
 </template>
 
 <script>
+import { colors } from '@/store'
+import VueWriter from 'vue-writer'
+import ClickableText from '@/components/ClickableText.vue'
 export default {
-
+  data() {
+    return {
+      colors
+    }
+  },
+  components: {
+    VueWriter,
+    ClickableText
+  }
 }
 </script>
 
 <style>
+.aboutcontainer {
+  width: 100%;
+  height: 99%;
+  overflow: hidden;
+}
+.aboutcontainer img {
+  box-sizing: border-box;
+  height: 40vh;
+  position: absolute;
+  top: 1vh;
+  left: 1vw;  
+  border-radius: 5vw;
+  box-shadow: -1vw -1vw 0 v-bind('colors.colhighlight');
+}
+.bottomrow {
+  width: 100%;
+  height: 26vh;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 0.6vw solid v-bind('colors.colaccent');
+  border-radius: 50vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
+.bottomrow > a > svg {
+  width: 4vw;
+  transition: fill 0.3s;
+  fill: v-bind('colors.colaccent');
+}
+.bottomrow > a:hover > svg {
+  fill: v-bind('colors.colhighlight');
+  cursor: pointer;
+}
+
+.topright {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  right: 1vw;
+  height: 40vh;
+  width: 26.5vw;
+  padding-top: 4vh;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+}
+.inline {
+  display: inline;
+}
+.is-typed span.typed {
+  color: v-bind('colors.colhighlight');
+}
+.aboutcontainer p {
+  font-size: 1.8vh;
+}
 </style>
