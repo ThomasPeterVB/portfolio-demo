@@ -1,4 +1,4 @@
-import { reactive, ref } from "vue";
+import { reactive, ref } from "vue"
 
 const colors = reactive({
     colfocus: '#833824',
@@ -8,7 +8,7 @@ const colors = reactive({
 })
 
 function changeColor(color, value) {
-    colors[color] = value;
+    colors[color] = value
 }
 
 var currentImage = 'csharp-raw.png'
@@ -34,13 +34,13 @@ function changeSkew(deg) {
 
 var submitStatus = ref(false)
 function changeSubmitStatus() {
-    submitStatus.value = true;
+    submitStatus.value = true
 }
 
 function rotateColor(n) {
-    var index = colorarray.map(color => color.highlight).indexOf(colors.colhighlight);
+    var index = colorarray.map(color => color.highlight).indexOf(colors.colhighlight)
     var next = (index + n) % colorarray.length === -1 ? colorarray.length-1 : (index + n) % colorarray.length
-    colors.colfocus = colorarray[next].col;
+    colors.colfocus = colorarray[next].col
     colors.colhighlight = colorarray[next].highlight
 }
 
