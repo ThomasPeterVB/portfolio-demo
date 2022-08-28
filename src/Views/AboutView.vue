@@ -1,6 +1,6 @@
 <template>
   <div class="aboutcontainer">
-    <img src="@/assets/images/thomaspetergreyscale.png" alt="">
+    <img @mouseover="colorMe" src="@/assets/images/thomaspetergreyscale.png" alt="">
     <div class="topright">
       <h1><VueWriter class="inline" :typeSpeed="100" :eraseSpeed="50"  :array="['JavaScript', 'TypeScript', 'C#', 'Vue', 'React', 'Node', 'Python', 'Java', 'C++']">Hi! I'm <ClickableText text="Thomas" :startSelection="5" />,<br>and I'm a </VueWriter>developer</h1>
       <br><br>
@@ -24,6 +24,11 @@ export default {
   data() {
     return {
       colors
+    }
+  },
+  methods: {
+    colorMe(e) {
+      console.log(e)
     }
   },
   components: {

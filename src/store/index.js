@@ -11,11 +11,11 @@ function changeColor(color, value) {
     colors[color] = value
 }
 
-var currentImage = 'csharp-raw.png'
-var imageList = ['vue-raw.png', 'react-raw.png', 'csharp-raw.png']
+var currentImage = ref('vue-raw.png')
+var imageList = ['react-raw.png', 'vue-raw.png', 'csharp-raw.png']
 function nextImage(n){
-    let next = imageList.indexOf(currentImage) + n === -1 ? imageList.length - 1 : (imageList.indexOf(currentImage) + n) % imageList.length
-    currentImage = imageList[next]
+    let next = imageList.indexOf(currentImage.value) + n === -1 ? imageList.length - 1 : (imageList.indexOf(currentImage.value) + n) % imageList.length
+    currentImage.value = imageList[next]
     return imageList[next]
 }
 
