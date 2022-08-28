@@ -55,7 +55,6 @@ nav {
     margin: 0 0.6vw;
     box-sizing: border-box;
     transition: border 0.5s;
-    /* padding-bottom: 2vh; */
 }
 .svgbox, .svg {
     width: 3vw;

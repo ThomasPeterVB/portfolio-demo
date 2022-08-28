@@ -13,19 +13,19 @@
   <div class="bottomhalf">
     <Transition>
       <div class="information" v-if="barSelection === skills[0].skill">
-        <h2>Five years of experience building projects such as APIs for Web Apps, stand-alone WPF/WinForms tools, Worker Services, and a .NET MMORPG I maintained and updated for four years<br><br>As well as lesser experience in Unity, MonoGame(XNA), and some MAUI(Xamarin) phone development </h2>
+        <h2>Five years of experience building stand-alone WPF/WinForms tools, APIs for Web Apps in ASP.NET, Worker Services, and a MMORPG I maintained and updated for four years<br><br>I've also worked on lesser projects in in Unity, MonoGame(XNA), and some MAUI(Xamarin) phone apps </h2>
       </div>
       <div class="information" v-else-if="barSelection === skills[1].skill">
-        <h2>Five years of experience building Web apps (half of which in Vue.JS and React), APIs in Node, independent modules and libraries, games, Google Script, Mobile apps, and data analysis<br><br>And some lesser experience with AngularJS, Next.js, and Express.js</h2>
+        <h2>Five years of experience building Web apps (Mostly in Vue.JS and React), APIs in Node, independent modules and libraries, games, Google Scripts for data analysis, and Mobile apps<br><br>I have additional experience working in Angular, Next, and Express, and commonly use libraries such as jQuery, D3, and Solid</h2>
       </div>
       <div class="information" v-else-if="barSelection === skills[2].skill">
-        <h2>On and off experience building micro applications for automation, data analysis, and visualisation, in both Django and PyQt(5)<br><br>Including extensive familiarity with common libraries such as SciPy, Keras, PyTorch, and TensorFlow</h2>
+        <h2>On and off experience building micro applications for automation, data analysis, and visualisation, in both Django and PyQt(5)<br><br>Additional experience with common libraries such as SciPy, Keras, PyTorch, and TensorFlow</h2>
       </div>
       <div class="information" v-else-if="barSelection === skills[3].skill">
-        <h2>On and off experience building APIs, stand-alone tools and applications in Spring Boot, integration projects with many fluctuating dependencies in Maven, and web development in Spark<br><br>As well as DevOps consulting, microservices through Kubernetes, and large-scale migration projects<br><br></h2>
+        <h2>On and off experience building APIs, stand-alone tools and applications in Spring Boot, integration projects in Maven, and web development in Spark<br><br>As well as DevOps consulting, microservices through Kubernetes, and large-scale migration projects to a variety of other frameworks and languages listed<br><br></h2>
       </div>
       <div class="information" v-else-if="barSelection === skills[4].skill">
-        <h2>Working on and off on personal projects including a homemade game engine as well as a framework I intend to use for developing iOS and Android apps for the novels I write<br><br>As well as a smaller project for pseudo-randomization using specific hardware</h2>
+        <h2>Periodically working on personal projects including a homemade game engine, as well as a framework I intend to use for developing iOS and Android apps for the novels I write<br><br>As well as a small project for pseudo-randomization using specific hardware</h2>
       </div>
     </Transition>
   </div>

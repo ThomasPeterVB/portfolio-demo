@@ -1,25 +1,32 @@
 <template>
   <div class="pfcontainer">
     <div class="pfitem" v-if="currentImage === 'csharp-raw.png'">
-      C-Sharp
+      Coming soon
     </div>
     <div class="pfitem" v-else-if="currentImage === 'vue-raw.png'">
-      <h2 ><ClickableText text="Hi there!" :startSelection="8" /></h2>
-      <div class="guide1"></div>
+      <h2 ><ClickableText text="Hi there!" :startSelection="6" /></h2>
+      <div class="delayme">
+        <p><br>Use the arrows to switch between projects<br><br>Or head on over to:</p>
+        <router-link :to="{name: 'skills'}" ><button><span class="buttontext">Skills</span></button></router-link>
+        <router-link :to="{name: 'contact'}" ><button><span class="buttontext">Contact</span></button></router-link>
+        <router-link :to="{name: 'about'}" ><button><span class="buttontext">About</span></button></router-link>
+      </div>
+      <div class="footnote delayme">Don't like the tilt? Click the arrow in the top-left corner</div>
     </div>
     <div class="pfitem" v-else-if="currentImage === 'react-raw.png'">
-      React
+      Coming soon
     </div>
   </div>
 </template>
 
 <script>
-import { currentImage } from '@/store'
+import { currentImage, colors } from '@/store'
 import ClickableText from '@/components/ClickableText.vue'
 export default {
   data() {
     return {
-      currentImage
+      currentImage,
+      colors
     }
   },
   components: {
@@ -37,7 +44,6 @@ export default {
   margin-top: 4vh;
   width: 47vw;
   height: 56vh;
-  outline: 1px solid blue;
 }
 .pfitem h2 {
   font-size: 3rem;
@@ -45,7 +51,46 @@ export default {
 }
 
 .pfitem p {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+}
+
+.pfitem .delayme {
+  animation: appear 3s;
+}
+
+.pfitem button {
+  display: inline-flex;
+  box-sizing: content-box;
+  margin: 10vh 3vw 0;
+  height: 4rem;
+  width: 8rem;
+  background-color: transparent;
+  border: 0.25vw solid v-bind('colors.colfocus');
+  border-radius: 5%;
+  transition: border ease 0.3s;;
+}
+.pfitem .buttontext {
+  margin: auto;
+  text-align: center;
+  color: v-bind('colors.colaccent');
+  font-size: 2.2rem;
+  transition: color ease 0.6s;
+}
+.pfitem button:hover {
+  cursor: pointer;
+  border-color: v-bind('colors.colhighlight');
+}
+.pfitem button:hover .buttontext {
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+.footnote {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 1.7rem;
 }
 
 @keyframes fallInFromSide {
@@ -62,5 +107,11 @@ export default {
   100% {
     transform: translateX(0) scale(1);
   }
+}
+
+@keyframes appear {
+  0% {opacity: 0;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
 }
 </style>

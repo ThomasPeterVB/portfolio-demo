@@ -14,7 +14,7 @@
         <textarea class="input" v-model="message" id="message" placeholder="Please enter your message" :class="message === '' ? 'empty' : ''" :disabled="submitStatus ? true : false"/>
       </div>
       <button v-if="!submitStatus" id="submit" type="submit">Submit</button>
-      <button v-else>Message Sent!</button>
+      <button disabled v-else>Messages disabled</button>
     </form>
   </div>
 </template>
@@ -56,7 +56,7 @@ export default {
   },
   computed: {
     headerText() {
-      return this.submitStatus ? 'Message sent' : 'Send me a message'
+      return this.submitStatus ? 'Messages Temporarily Disabled' : 'Send me a message'
     }
   }
 }
