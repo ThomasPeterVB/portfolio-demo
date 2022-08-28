@@ -10,8 +10,9 @@
         <router-link :to="{name: 'skills'}" ><button><span class="buttontext">Skills</span></button></router-link>
         <router-link :to="{name: 'contact'}" ><button><span class="buttontext">Contact</span></button></router-link>
         <router-link :to="{name: 'about'}" ><button><span class="buttontext">About</span></button></router-link>
+        <p><span class="smaller">Don't like the tilt? Click the arrow in the top-left corner</span></p>
       </div>
-      <div class="footnote delayme">Don't like the tilt? Click the arrow in the top-left corner</div>
+      <div class="footnote delayme"></div>
     </div>
     <div class="pfitem" v-else-if="currentImage === 'react-raw.png'">
       Coming soon
@@ -61,7 +62,7 @@ export default {
 .pfitem button {
   display: inline-flex;
   box-sizing: content-box;
-  margin: 10vh 3vw 0;
+  margin: 8vh 3vw;
   height: 4rem;
   width: 8rem;
   background-color: transparent;
@@ -86,11 +87,8 @@ export default {
 a {
   text-decoration: none;
 }
-.footnote {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  font-size: 1.7rem;
+.smaller {
+  font-size: 65%;
 }
 
 @keyframes fallInFromSide {
