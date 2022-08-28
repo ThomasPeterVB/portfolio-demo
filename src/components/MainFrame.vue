@@ -57,9 +57,6 @@ export default {
     }
   },
   computed: {
-    // bgImageCsharp () {
-    //   return require('@/assets/images/' + this.imageName)
-    // },
     inlineImage () {
       var path = require('@/assets/images/' + this.imageName)
       return {
