@@ -22,7 +22,7 @@ const routes = [
     component: () => import('@/Views/AboutView.vue')
   },
   {
-    path: '/:pathMatch(.*)*',
+    path: "/:catchAll(.*)",
     redirect: '/home'
   }
 ]
