@@ -28,7 +28,22 @@ export default {
 </script>
 
 <style>
-
+@media (min-width: 0){
+    .navbar {
+        width: 100vw;
+    }
+    .textcontent {
+        display: none;
+    }
+}
+@media (min-width: 600px) {
+    .navbar {
+        width: 30vw;
+    }
+    .textcontent {
+        display: inline;
+    }
+}
 nav {
     width: 100%;
     height: 7vh;
@@ -45,19 +60,18 @@ nav {
 .navbar {
     position: relative;
     height: 7vh;
-    width: 30vw;
     margin: 0 auto;
 }
 .navbar > a {
     height: 7vh;
-    width: 3vw;
+    width: 10%;
+    margin: 0 2%;
     display: inline-flex;
-    margin: 0 0.6vw;
     box-sizing: border-box;
     transition: border 0.5s;
 }
 .svgbox, .svg {
-    width: 3vw;
+    width: 100%;
 }
 .svg {
     fill: v-bind('colors.colaccent');

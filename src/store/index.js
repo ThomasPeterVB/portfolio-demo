@@ -32,7 +32,7 @@ function changeSkew(deg) {
     skewAngle.value = deg
 }
 
-var submitStatus = ref(true)
+var submitStatus = ref(false)
 function changeSubmitStatus() {
     submitStatus.value = true
 }

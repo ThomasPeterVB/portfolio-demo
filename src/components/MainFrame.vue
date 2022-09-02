@@ -2,10 +2,10 @@
 <TiltControl />
 <div class="carouselview">
   <div class="carousel">
-    <div @click="cycleLeft" class="cycle left">
+    <div v-show="currentPage == 'main'" @click="cycleLeft" class="cycle left">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -5 24 24" width="24" fill="currentColor"><path d="M2.757 7l4.95 4.95a1 1 0 1 1-1.414 1.414L.636 7.707a1 1 0 0 1 0-1.414L6.293.636A1 1 0 0 1 7.707 2.05L2.757 7z"></path></svg>
     </div>
-    <div @click="cycleRight" class="cycle right">
+    <div v-show="currentPage == 'main'" @click="cycleRight" class="cycle right">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-8 -5 24 24" width="24" fill="currentColor"><path d="M5.314 7.071l-4.95-4.95A1 1 0 0 1 1.778.707l5.657 5.657a1 1 0 0 1 0 1.414l-5.657 5.657a1 1 0 0 1-1.414-1.414l4.95-4.95z"></path></svg>
     </div>
     <Transition name="carouselimage">
@@ -62,6 +62,9 @@ export default {
       return {
         backgroundImage: `url(${path})`
       }
+    },
+    currentPage() {
+      return this.$route.name;
     }
   },
   components: {
@@ -104,14 +107,31 @@ export default {
   transform-origin: top;
   transition: transform .6s ease-in-out;
 }
+@media (min-width: 0){
+  .content{
+    max-width: 95vw;
+    height: 55vh;
+  }
+  .cycle{
+    height: 20vw;
+    width: 20vw;
+  }
+}
+@media (min-width: 600px) {
+  .content{
+    max-width: 50vw;
+    height: 66vh;
+  }
+  .cycle{
+    height: 10vw;
+    width: 10vw;
+  }
+}
 .content {
   position: relative;
   box-sizing: border-box;
   z-index: 30;
-  height: 66vh;
-  max-width: 50vw;
   margin: 0 auto;
-  padding: 1vh 1vw;
   border: 0.6vh v-bind('colors.colaccent');
   border-style: none solid;
   background-color: rgba(14,14,14,0.6);
@@ -122,8 +142,6 @@ export default {
   z-index: 200;
   position: absolute;
   top: 23vh;
-  height: 10vw;
-  width: 10vw;
 }
 .left {
   left: 1vw;

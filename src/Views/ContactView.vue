@@ -1,7 +1,8 @@
 <template>
   <div class="contact">
     <div class="header">
-      <h1><ClickableText :text="headerText" :startSelection="submitStatus ? 5 : 9" /></h1>
+      <h1 v-if="!submitStatus"><ClickableText text="Send me a message" :startSelection="9" /></h1>
+      <h1 v-else><ClickableText text="Message sent" :startSelection="5" /></h1>
     </div>
     <form @submit.prevent="submitForm" class="contactForm" @reset="resetForm">
       <div class="block">
@@ -14,7 +15,7 @@
         <textarea class="input" v-model="message" id="message" placeholder="Please enter your message" :class="message === '' ? 'empty' : ''" :disabled="submitStatus ? true : false"/>
       </div>
       <button v-if="!submitStatus" id="submit" type="submit">Submit</button>
-      <button disabled v-else>Messages disabled</button>
+      <button disabled v-else>Message sent</button>
     </form>
   </div>
 </template>
@@ -52,11 +53,6 @@ export default {
           changeSubmitStatus()
         }).catch((err) => {console.log(err)})
       }
-    }
-  },
-  computed: {
-    headerText() {
-      return this.submitStatus ? 'Messages Temporarily Disabled' : 'Send me a message'
     }
   }
 }

@@ -36,8 +36,7 @@ export default {
     left: 0vw;
 }
 .arrow, .arrow > path {
-    height: 4vw;
-    width: 4vw;
+    width: 300%;
 }
 .arrow {
     transform: rotate(v-bind('arrowRotation'));

@@ -24,6 +24,7 @@ export default {
   width: 100vw;
   height: 10vh;
   transition: all 0.6s;
+  margin-top: 2vh;
 }
 .footer h1 {
   float: right;

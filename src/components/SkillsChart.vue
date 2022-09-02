@@ -38,6 +38,30 @@ export default {
 </script>
 
 <style scoped>
+@media (min-width: 0) {
+    .bars li {
+        width: 10vw;
+        height: 18vh;
+        bottom: 5vh;
+        left: 4vw;
+    }
+    .bars .bar {
+        margin-left: 0;
+        width: 6.5vw;
+    }
+}
+@media (min-width: 600px) {
+    .bars li {
+        width: 8vw;
+        height: 28vh;
+        bottom: 5vh;
+        left: 0;
+    }
+    .bars .bar {
+        margin-left: 20%;
+        width: 3.5vw;
+    }
+}
 .bodych {
     display: flex;
     justify-content: center;
@@ -59,15 +83,12 @@ export default {
     margin: 0;
     padding: 0;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 1%;
 }
 
 .bars li{
     display: table-cell;
-    width: 8vw;
-    height: 30vh;
     position: relative;
-    bottom: 5vh;
 }
 
 .bars span{
@@ -80,10 +101,8 @@ export default {
 .bars .bar {
     display: block;
     background: v-bind('colors.colfocus');
-    width: 3.5vw;
     position: absolute;
     bottom: 0;
-    margin-left: 2.2vw;
     text-align: center;
     box-shadow: 0 0 10px 0 rgba(255,255,255,0.3);
     transition: box-shadow, background 0.5s;

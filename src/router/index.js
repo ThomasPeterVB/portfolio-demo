@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
-    path: '/home',
+    path: '/',
     name: 'main',
     component: () => import('@/Views/MainView.vue')
   },
@@ -23,7 +23,7 @@ const routes = [
   },
   {
     path: "/:catchAll(.*)",
-    redirect: '/home'
+    redirect: '/'
   }
 ]
 

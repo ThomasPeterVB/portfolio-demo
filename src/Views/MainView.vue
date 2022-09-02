@@ -37,22 +37,58 @@ export default {
 </script>
 
 <style>
+@media (min-width: 0){
+  .pfitem{
+    width: 75%;
+    margin: 5% 12.5% 0;
+  }
+  .pfitem h2 {
+    font-size: 2.5rem;
+  }
+  .pfitem p {
+    font-size: 1.5rem;
+  }
+  .pfitem button {
+    margin: 5% 6% 3%;
+    height: 3rem;
+    width: 6rem;
+  }
+  .pfitem .buttontext {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 600px) {
+  .pfitem{
+    width: 99%;
+    height: 100%;
+    margin: 2.5% 0.5%;
+  }
+  .pfitem h2 {
+    font-size: 3rem;
+  }
+  .pfitem p {
+    font-size: 2.5rem;
+  }
+  .pfitem button {
+    margin: 10% 6%;
+    height: 4rem;
+    width: 8rem;
+  }
+  .pfitem .buttontext {
+    font-size: 2.2rem;
+  }
+}
+
+.pfitem {
+  position: relative;
+}
+
 .pfcontainer {
   overflow: hidden;
 }
-.pfitem {
-  position: absolute;
-  margin-top: 4vh;
-  width: 47vw;
-  height: 56vh;
-}
-.pfitem h2 {
-  font-size: 3rem;
-  animation: fallInFromSide 1s;
-}
 
-.pfitem p {
-  font-size: 2.5rem;
+.pfitem h2 {
+  animation: fallInFromSide 1s;
 }
 
 .pfitem .delayme {
@@ -62,9 +98,6 @@ export default {
 .pfitem button {
   display: inline-flex;
   box-sizing: content-box;
-  margin: 8vh 3vw;
-  height: 4rem;
-  width: 8rem;
   background-color: transparent;
   border: 0.25vw solid v-bind('colors.colfocus');
   border-radius: 5%;
@@ -74,7 +107,6 @@ export default {
   margin: auto;
   text-align: center;
   color: v-bind('colors.colaccent');
-  font-size: 2.2rem;
   transition: color ease 0.6s;
 }
 .pfitem button:hover {
